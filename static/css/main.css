@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0px 5px 3px 0px #ddd;
+}
+
+.items-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo-title {
+    width: 38%;
+    display: flex;
+    padding-left: 120px;
+    align-items: center;
+}
+
+.logo-title h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.item-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 950px;
+}
+
+.item-nav button {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.item-nav .sign {
+    width: 80px;
+}
+
+.item-nav a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: gray;
+    font-size: 15px;
+    transition: all 0.3s;
+    width: 111px;
+}
+
+
+body.light {
+  background: white;
+  color: black;
+}
+
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+/* Светлая тема */
+body.light .grid-element {
+    background-color: #00000009;
+    color: #222;
+}
+
+/* Тёмная тема */
+body.dark .grid-element {
+    background-color: #2A2A2A; /* Тёмно-серый */
+    color: #E0E0E0;
+}
+
+body.light .menu-items {
+    background-color: rgba(0, 0, 0, 0.02);
+    color: #222;
+}
+
+/* Тёмная тема */
+body.dark .menu-items {
+    background-color: #2A2A2A; /* Тёмно-серый */
+    color: #E0E0E0;
+}
+
+
+body.dark .menu-item button.active {
+    /* стили для активной кнопки */
+    background-color: #FF4500; /* например, более яркий оранжевый */
+    color: #FFF;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
+  display: none;
+}
+
+/* Показываем соответствующую иконку */
+body.light #icon-sun {
+  display: inline;
+}
+
+body.dark #icon-moon {
+  display: inline;
+}
+
+body.light .item-nav a:hover {
+    color: rgb(0, 0, 0);
+}
+
+body.dark .item-nav a:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+body.light .logo-dark {
+    display: none;
+}
+
+body.dark .logo-white {
+    display: none;
+}
+
+
+.nav-elements-items {
+    width: 45%;
+}
+
+.main {
+    padding-left: 125px;
+    padding-right: 125px;
+    max-width: 100%;
+}
+
+.menu-items li {
+    padding-right: 20px;
+}
+
+.menu-items {
+    display: inline-flex;
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 7px;
+    margin-top: 30px; 
+    border-radius: 4px;
+    width: 96%;
+    list-style: none;
+    gap: 8px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.menu-item button {
+    padding: 10px 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    color: #4d4d4d;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 14px;
+}
+
+.menu-item button:hover {
+    background-color: #d7d7d7;
+}
+
+.menu-item.active button {
+    background-color: #FF6A00;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+.menu-item.active button:hover {
+    background-color: #dc5c01;
+}
+
+.menu-search {
+    display: flex;
+    align-items: center;
+    margin-left: 21px;
+    display: none;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination span {
+    font-family: "Poppins", sans-serif;
+}
+
+.pagination button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #FFE0CC; /* доступная кнопка */
+  color: #FF6A00;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover эффект для доступных кнопок */
+.pagination button:not(:disabled):hover {
+  background-color: #FF6A00;
+  color: white;
+}
+
+/* Неактивная кнопка */
+.pagination button:disabled {
+  background-color: #CCCCCC;
+  color: #888888;
+  cursor: not-allowed;
+}
+
+.menu-search form input {
+    height: 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid #d7d7d7;
+    padding-left: 5px;
+}
+
+.menu-search form button {
+    padding: 10px 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    color: #4d4d4d;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 14px;
+}
+
+.menu-search form button:hover {
+    background-color: #d7d7d7;
+}
+
+.block-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 27px;
+}
+
+.grid-element img {
+    width: 370px;
+    height: 360px;
+    display: flex;
+
+}
+
+.grid-element h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    /* padding-right: 287px; */
+}
+
+.grid-element p {
+    font-family: "Poppins", sans-serif;
+}
+
+
+.grid-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    background-color: #00000009;
+    padding: 30px 5px;
+    border: 1px solid rgba(0, 0, 0, 0.250);
+    border-radius: 10px;
+}
+
+.grid-elements-ul {
+    display: inline-flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.interval-blocks {
+    height: 50px;
+}
+
+footer {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 40px;
+    margin-top: 50px;
+    background-color: #000000b8;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 220px;
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        align-items: center;
+    }
+}
+
+.grid-element a {
+    background-color: #FF6A00;
+    color: white;
+    padding: 10px;
+    border-radius: 7px;
+    transition: all 0.3s;
+    font-family: "Poppins", sans-serif;
+    margin-top: 10px;
+}
+
+.grid-element a:hover {
+    background-color: #dc5c01;
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .item-nav {
+        margin-left: 4px;
+    }
+    .item-nav .sign {
+        width: 70px;
+    }
+
+    .menu-items {
+        display: flex;
+        height: 35px;
+        flex-wrap: nowrap;             /* чтобы не переносились */
+        overflow-x: auto;              /* включаем горизонтальную прокрутку */
+        -webkit-overflow-scrolling: touch; /* плавный свайп на iOS */
+        scrollbar-width: none;         /* скрыть скроллбар — Firefox */
+        -ms-overflow-style: none;      /* скрыть скроллбар — IE/Edge */
+    }
+
+    .menu-items::-webkit-scrollbar {
+        display: none;                 /* скрыть скроллбар — Chrome/Safari */
+    }
+
+    .menu-item {
+        flex: 0 0 auto;                /* элементы не сжимаются и не растягиваются */
+        margin-right: 10px;            /* отступ между кнопками, если нужно */
+    }
+
+    .menu-search {
+        display: flex;
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .menu-search form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .menu-search form input {
+        width: 90%;
+    }
+
+    .menu-search form button {
+        width: 90%;
+    }
+
+    .grid-elements-ul {
+        justify-content: center;
+    }
+
+    .grid-element {
+        width: 90%;
+    }
+
+    .grid-element img {
+        width: 100%;
+        height: auto;
+    }
+
+    .logo-title {
+        padding-left: 20px;
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item button {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .block-title {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .grid-element h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .grid-element p {
+        text-align: center;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .pagination button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
